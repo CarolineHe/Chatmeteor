@@ -16,11 +16,16 @@ if (Meteor.isClient) {
 
       Messages.insert ({
           message: value,
-          timestamp: new Date()
+          timestamp: new Date(),
+          user: Meteor.userId()
       });
     }
 }
-  })
+  });
+
+  Accounts.ui.config({
+      passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
+  });
 
 }
 
