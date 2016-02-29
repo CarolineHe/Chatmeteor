@@ -29,7 +29,7 @@ Template.message.helpers({
         return Meteor.users.findOne({_id: this.user});
     },
     time: function(){
-        return this.timestamp;
+        return moment(this.timestamp).format('h:mm a');
     }
 });
 
