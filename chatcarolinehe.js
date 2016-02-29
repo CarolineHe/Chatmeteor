@@ -8,7 +8,19 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.messages.events({
+    'keypress textarea': function(e, instance) {
+      if (e.keyCode == 13) { //enter key pressed
+          var value = instance.find('textarea').value;
+            instance.find('textarea').value = '';
 
+      Messages.insert ({
+          message: value,
+          timestamp: new Date()
+      });
+    }
+}
+  })
 
 }
 
