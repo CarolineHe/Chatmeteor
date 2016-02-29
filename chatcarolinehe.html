@@ -1,17 +1,21 @@
 <head>
   <title>chatcarolinehe</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <div>
   <h1>Welcome to Caroline's chat!</h1>
 
   {{> messages}}
+  </div>
 </body>
 
 <template name="messages">
     <div>
     {{>loginButtons align="right"}}
 </div>
+<div>
   <ul>
       {{#each messages}}
       {{>message}}
@@ -21,6 +25,7 @@
   <form>
       <textarea rows="1" cols="100"></textarea>
   </form>
+  </div>
 </template>
 
 <template name="message">
