@@ -1,1 +1,16 @@
 /* CSS declarations go here */
+body{
+    background-color: rgb(232, 213, 230);
+}
+
+h1{
+    font-family: 'Indie Flower', cursive;
+    color:rgb(212, 56, 228);
+    text-align: center;
+    border: solid 5px #333;
+    background-color: rgb(241, 175, 195);
+}
+
+textarea{
+    background-color: rgb(241, 175, 195);
+}
